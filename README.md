@@ -19,7 +19,8 @@ The FoxtrotAPI supports 2 ways of fetching a strip from a database of 400+ comic
    
 ### 2. Fetching a strip by title:
    ```javascript
-   var result = await fetch("https://.../title=<strip_title>); //replace <strip_title> with the title of the comic strip you want to fetch, such as Iguanoman.
+   var result = await fetch("https://.../title=<strip_title>);
+   //replace <strip_title> with the title of the comic strip you want to fetch, such as Iguanoman.
    ```
 Here's the strip fetched above: "Iguanoman" by Bill Amend.
 ![Here's the strip fetched above](http://1a3k5t1s1nlq3nug3z23q9ed-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/ft200712-foxtrot-comics-bill-amend-iguanoman-2020-quincy-jason-aliens-sunday-comic-strip.png)
