@@ -2,25 +2,17 @@
 <html>
 
 <head>
-  <title> </title>
-  <link rel="stylesheet" href="style.css">
+  <title> Foxtrot API</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  Random
-  <img id="comic">
-  </img>
+  <h1>
+  </h1>
+  <img id="comic"> </img>
 </body>
-<script>
-  async function get_comic() {
-    const x = await fetch("http://127.0.0.1:5000/random");
-    const y = await x.json();
-    console.log(y);
-
-    const img = document.getElementById("comic");
-    img.src = y.img_src;
-  }
-  get_comic()
+<script src="/static/main.js">
 </script>
 
 </html>

@@ -1,6 +1,4 @@
 import dns
-import json
-import requests
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from pymongo import MongoClient
@@ -8,7 +6,6 @@ from pymongo import MongoClient
 cluster = MongoClient("mongodb+srv://MrFox:wukme6-Fodfic-boxgan@cluster0.rbtg9.mongodb.net/Foxtrot?retryWrites=true&w=majority")
 db = cluster["Foxtrot"]
 comics_db = db["comics"]
-
 id = 0
 
 FOXTROT = "https://foxtrot.com/"
@@ -41,5 +38,4 @@ def get(page):
 
 
 
-for i in range(1,2):
-    get("https://foxtrot.com/page{}".format(i))
+print(comics_db.find_one({"_id": 1}))
