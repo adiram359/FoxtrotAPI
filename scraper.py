@@ -38,4 +38,4 @@ def get(page):
 
 
 
-print(comics_db.find_one({"_id": 1}))
+print(comics_db.find_one({"_id": 65}))

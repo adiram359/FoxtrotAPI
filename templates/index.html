@@ -4,14 +4,74 @@
 <head>
   <title> Foxtrot API</title>
   <link rel="stylesheet" href="/static/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>
-  </h1>
-  <img id="comic"> </img>
+
+  <div class="notheader">
+    <h1>
+      Foxtrot API
+      <img id="quincy-img" src="/static/quincy.png"></img>
+    </h1>
+
+  </div>
+  <div class="about">
+    Hey there! Thanks for checking out the Foxtrot API. Foxtrot
+    was one of my favorite comics I read when I was younger, so I decided
+    to build this API. FoxtrotAPI can can fetch comics strips from a database of 400+ stips!
+    Right now, there are two ways to fetch a comic strip:
+  </div>
+  <div class="code">
+    1. Fetch a random comic strip:
+    <div id="code_editor">
+      <p>
+        <span style="color:#E74C3C"> var </span>
+        result = await
+        <span style="color:#8E44AD">fetch(
+          <span style="color:#1F618D">https://foxtrot.io/random</span>
+          )
+        </span>
+      </p>
+      <div style="color:#28B463"> response: </div>
+      <div style="color:#808B96">
+        /* { "id_": 1,
+        "author": "Bill Amend",
+        "title": "Iguanoman",
+        "img_src": "iguanoman.png"} */
+      </div>
+    </div>
+    2. Fetch a strip with a specfic title:
+    <div id="code_editor">
+      <p>
+        <span style="color:#E74C3C"> var </span>
+        result = await
+        <span style="color:#8E44AD">fetch(
+          <span style="color:#1F618D">https://foxtrot.io/title=strip_title</span>
+          )
+          <span style="color:#808B96"> //replace strip_title </span>
+        </span>
+      </p>
+      <div style="color:#28B463"> response: </div>
+      <div style="color:#808B96">
+        /* { "id_": 1,
+        "author": "Bill Amend",
+        "title": "Iguanoman",
+        "img_src": "iguanoman.png"} */
+      </div>
+    </div>
+  </div>
+  <div class="comicdiv">
+    <button id="fetchComic" class="button"><span>Fetch Comic! </span></button>
+    <div id="comicTitle"> </div>
+    <img id="comic"> </img>
+  </div>
+
 </body>
+
 <script src="/static/main.js">
 </script>
 

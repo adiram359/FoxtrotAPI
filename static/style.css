@@ -1,3 +1,109 @@
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 40px;
+  padding: 10px;
+}
+body {
+  margin: 0px;
+}
+#quincy-img {
+  width: 6%;
+  margin-left: 1%;
+  border-radius:1px;
+
+}
+#comic {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10%;
+}
+
+.notheader {
+  background-color: white;
+  background-color: #F4D03F;
+}
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+.comicdiv {
+  margin-left: 3%;
+  width: 60%;
+}
+
+
+.code {
+  padding: 10px;
+  margin-left: 3%;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  border-radius:1px;
+}
+
+#code_editor {
+  width: 70%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #F2F3F4;
+  border-radius:2px;
+  font-size:15px;
+  box-shadow: 0px 2px 5px 2px #E5E7E9;
+
+}
+
+.about {
+  text-align:left;
+  margin:2% 20% 2% 4%;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size:20px;
+}
+
+
+.button {
+  border-radius: 4px;
+  background-color: #5DADE2;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px ;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#comicTitle {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
 }

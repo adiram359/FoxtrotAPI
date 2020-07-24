@@ -1,6 +1,8 @@
+import re
 import dns
 import random
-from flask import Flask, render_template, jsonify
+import requests
+from flask import Flask, render_template, jsonify, request
 from pymongo import MongoClient
 
 app = Flask(__name__)
@@ -12,18 +14,16 @@ comics_db = db["comics"]
 def hello():
     return render_template("index.html")
 
-@app.route("/style.css")
-def return_style():
-    return render_template("style.css")
+@app.route("/title/<title>")
+def print_man(title):
+    title = " ".join(title.split("."))
+    x = comics_db.find_one({"title": " ".join(title.split("."))})
+    return render_template("index.html")
 
-@app.route("/main.js")
-def return_main():
-    return render_template("main.js")
 
 @app.route("/random", methods=["GET"])
 def get_random_comic():
     x = comics_db.find_one({"_id": random.randint(1, 474)})
-    print(x)
     return jsonify(x)
 
 
