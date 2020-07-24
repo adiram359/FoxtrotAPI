@@ -63,4 +63,4 @@ def get_by_date(date):
     return query_db(filter)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
