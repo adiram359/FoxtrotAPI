@@ -41,7 +41,9 @@
         /* { "id_": 1,
         "author": "Bill Amend",
         "title": "Iguanoman",
-        "img_src": "iguanoman.png"} */
+        "img_src": "iguanoman.png"
+        "date": Month.Date.Year
+        "success": true} */
       </div>
     </div>
     2. Fetch a strip with a specfic title:
@@ -50,9 +52,11 @@
         <span style="color:#E74C3C"> var </span>
         result = await
         <span style="color:#8E44AD">fetch(
-          <span style="color:#1F618D">https://foxtrot.io/title=strip_title</span>
+          <span style="color:#1F618D">https://foxtrot.io/title/strip_title</span>
           )
-          <span style="color:#808B96"> //replace strip_title </span>
+          <span style="color:#808B96">
+            //replace strip_title and use "." in place of space"
+          </span>
         </span>
       </p>
       <div style="color:#28B463"> response: </div>
@@ -60,12 +64,37 @@
         /* { "id_": 1,
         "author": "Bill Amend",
         "title": "Iguanoman",
-        "img_src": "iguanoman.png"} */
+        "img_src": "iguanoman.png"
+        "date": Month.Date.Year
+        "success": true} */
       </div>
     </div>
+
+    3. Fetch a strip by the date it was published:
+    <div id="code_editor">
+      <p>
+        <span style="color:#E74C3C"> var </span>
+        result = await
+        <span style="color:#8E44AD">fetch(
+          <span style="color:#1F618D">https://foxtrot.io/date/Month.Date.Year</span>
+          )
+          <span style="color:#808B96"> //format is MM.DD.YYYY </span>
+        </span>
+      </p>
+      <div style="color:#28B463"> response: </div>
+      <div style="color:#808B96">
+        /* { "id_": 1,
+        "author": "Bill Amend",
+        "title": "Iguanoman",
+        "img_src": "iguanoman.png"
+        "date": Month.Date.Year
+        "success": true} */
+      </div>
+    </div>
+
   </div>
   <div class="comicdiv">
-    <button id="fetchComic" class="button"><span>Fetch Comic! </span></button>
+    <button id="fetchComic" class="button"><span>Fetch Another Comic! </span></button>
     <div id="comicTitle"> </div>
     <img id="comic"> </img>
   </div>

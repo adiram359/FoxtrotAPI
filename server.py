@@ -12,19 +12,59 @@ comics_db = db["comics"]
 
 @app.route("/")
 def hello():
+    """
+        default landing page
+    """
     return render_template("index.html")
 
+def query_db(filter):
+    """
+    queries the database and retuns a JSON:
+    {
+        _id: id of comic,
+        author: "Bill Amend",
+        title: comic title,
+        img_src: img.png,
+        date: Month.Date.Year,
+        success: True if in db else false
+    }
+    """
+    query_result = comics_db.find_one(filter)
+    if query_result == None:
+        return jsonify({
+        "success": False
+        })
+    else:
+        query_result["success"] = True
+        return jsonify(query_result)
+
 @app.route("/title/<title>")
-def print_man(title):
-    title = " ".join(title.split("."))
-    x = comics_db.find_one({"title": " ".join(title.split("."))})
-    return render_template("index.html")
+def get_by_title(title):
+    """
+        Returns comic based on title
+    """
+    filter = {"title": " ".join(title.split("."))}
+    return query_db(filter)
 
 
 @app.route("/random", methods=["GET"])
 def get_random_comic():
-    x = comics_db.find_one({"_id": random.randint(1, 474)})
-    return jsonify(x)
+    """
+        Returns a random comic
+    """
+    filter = {"_id": random.randint(1, 474)}
+    return query_db(filter)
+
+
+@app.route("/date/<date>")
+def get_by_date(date):
+    """
+        Returns comic by date published
+    """
+    filter = {"date": date}
+    return query_db(filter)
+
+
 
 
 if __name__ == "__main__":
