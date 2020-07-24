@@ -3,7 +3,7 @@ button.onclick = get_comic;
 
 async function get_comic() {
   console.log("pressed")
-  const x = await fetch("http://127.0.0.1:5000/random");
+  const x = await fetch("/random");
   const y = await x.json();
   console.log(y);
 
