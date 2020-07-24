@@ -9,6 +9,9 @@ comics_db = db["comics"]
 id = 0
 FOXTROT = "https://foxtrot.com/"
 def get(page):
+    """
+        Scrapes comic from url and puts it in database
+    """
     req = Request(page, headers={'User-Agent': 'Mozilla/5.0'})
     webpage = urlopen(req).read()
     soup = BeautifulSoup(webpage, 'lxml')
@@ -37,6 +40,11 @@ def get(page):
         id += 1
 
 def parse_date(date):
+    """
+        Parses string in the from:
+        "Published Month Day, Year" -> "Month.Day.Year"
+    """
+
     print(date)
     date = date.replace(",", "")
     list = date.split()

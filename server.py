@@ -46,7 +46,6 @@ def get_by_title(title):
     filter = {"title": " ".join(title.split("."))}
     return query_db(filter)
 
-
 @app.route("/random", methods=["GET"])
 def get_random_comic():
     """
@@ -55,7 +54,6 @@ def get_random_comic():
     filter = {"_id": random.randint(1, 474)}
     return query_db(filter)
 
-
 @app.route("/date/<date>")
 def get_by_date(date):
     """
@@ -63,9 +61,6 @@ def get_by_date(date):
     """
     filter = {"date": date}
     return query_db(filter)
-
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)

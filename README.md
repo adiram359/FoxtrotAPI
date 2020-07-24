@@ -1,7 +1,7 @@
 # FoxtrotAPI
 The FoxtrotAPI allows you to fetch hilarious comic strips from the Foxtrot series by Bill Amend
 ### Usage
-The FoxtrotAPI supports 2 ways of fetching a strip from a database of 400+ comic strips:
+The FoxtrotAPI supports 3 ways of fetching a strip from a database of 400+ comic strips:
 
 ### 1. Fetching a random comic strip:
    ```javascript
