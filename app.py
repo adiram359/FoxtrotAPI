@@ -30,6 +30,7 @@ def query_db(filter):
     }
     """
     query_result = comics_db.find_one(filter)
+    print(query_result)
     if query_result == None:
         return jsonify({
         "success": False
@@ -58,9 +59,10 @@ def get_random_comic():
 def get_by_date(date):
     """
         Returns comic by date published
-    """
+    """        
     filter = {"date": date}
     return query_db(filter)
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

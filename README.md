@@ -5,7 +5,7 @@ The FoxtrotAPI supports 3 ways of fetching a strip from a database of 400+ comic
 
 ### 1. Fetching a random comic strip:
    ```javascript
-   var result = await fetch("http://../random");
+   var result = await fetch("http://foxtrotapi.herokuapp.com/random");
    var comic_data = await result.json();
    /* comic_data will be a JSON with the following data:
       {
@@ -19,13 +19,13 @@ The FoxtrotAPI supports 3 ways of fetching a strip from a database of 400+ comic
 
 ### 2. Fetching a strip by title:
    ```javascript
-   var result = await fetch("https://.../title=<strip_title>);
+   var result = await fetch("https://foxtrotapi.herokuapp.com/title=<strip_title>);
    //replace <strip_title> with the title of the comic strip you want to fetch, such as Iguanoman.
    ```
 
 ### 3. Fetch a strip by the date it was published:
   ```javascript
-  var result = await fetch("https://foxtrot.io/date/Month.Date.Year");
+  var result = await fetch("https://foxtrotapi.herokuapp.com/date/Month.Date.Year");
   //replace Month.Date.Year i.e 01.16.1960 for January 16th, 1960
   ```
 
