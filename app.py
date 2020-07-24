@@ -59,7 +59,12 @@ def get_random_comic():
 def get_by_date(date):
     """
         Returns comic by date published
-    """        
+    """
+    lst = date.split(".")
+    for i in range(len(lst)):
+        if lst[i][0] == "0":
+            lst[i] = lst[i][1:]
+    date = ".".join(lst)
     filter = {"date": date}
     return query_db(filter)
 

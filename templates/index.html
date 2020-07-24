@@ -29,74 +29,75 @@
     Another Comic!" down below.
 
   </div>
-  <div class="code">
-    1. Fetch a random comic strip:
-    <div id="code_editor">
-      <p>
-        <span style="color:#E74C3C"> var </span>
-        result = await
-        <span style="color:#8E44AD">fetch(
-          <span style="color:#1F618D">https://foxtrotapi.herokuapp.com/random</span>
-          )
-        </span>
-      </p>
-      <div style="color:#28B463"> response: </div>
-      <div style="color:#808B96">
-        /* { "id_": 1,
-        "author": "Bill Amend",
-        "title": "Iguanoman",
-        "img_src": "iguanoman.png"
-        "date": Month.Date.Year
-        "success": true} */
-      </div>
-    </div>
-    2. Fetch a strip with a specfic title:
-    <div id="code_editor">
-      <p>
-        <span style="color:#E74C3C"> var </span>
-        result = await
-        <span style="color:#8E44AD">fetch(
-          <span style="color:#1F618D">https://foxtrotapi.herokuapp.com/title/strip_title</span>
-          )
-          <span style="color:#808B96">
-            //replace strip_title and use "." in place of space"
+
+  <div class="code_response">
+
+    <div class="code">
+      1. Fetch a random comic strip:
+      <div id="code_editor">
+        <p>
+          <span style="color:#E74C3C"> var </span>
+          result = await
+          <span style="color:#8E44AD">fetch(
+            <span style="color:#1F618D">https://foxtrotapi.herokuapp.com/random</span>
+            )
           </span>
-        </span>
-      </p>
-      <div style="color:#28B463"> response: </div>
-      <div style="color:#808B96">
-        /* { "id_": 1,
-        "author": "Bill Amend",
-        "title": "Iguanoman",
-        "img_src": "iguanoman.png"
-        "date": Month.Date.Year
-        "success": true} */
+        </p>
+      </div>
+      2. Fetch a strip with a specfic title:
+      <div id="code_editor">
+        <p>
+          <span style="color:#E74C3C"> var </span>
+          result = await
+          <span style="color:#8E44AD">fetch(
+            <span style="color:#1F618D">https://foxtrotapi.herokuapp.com/title/strip_title</span>
+            )
+          </span>
+        <div id="comments">
+          //replace strip_title and use "." in place of spaces"
+        </div>
+        </p>
+
+      </div>
+
+      3. Fetch a strip by the date it was published:
+      <div id="code_editor">
+        <p>
+          <span style="color:#E74C3C"> var </span>
+          result = await
+          <span style="color:#8E44AD">fetch(
+            <span style="color:#1F618D">https://foxtrotapi.herokuapp.com/date/Month.Date.Year</span>
+            )
+          </span>
+
+        <div id="comments">
+          //replace strip_title and use "." in place of spaces"
+        </div>
+        </p>
+
       </div>
     </div>
 
-    3. Fetch a strip by the date it was published:
-    <div id="code_editor">
-      <p>
-        <span style="color:#E74C3C"> var </span>
-        result = await
-        <span style="color:#8E44AD">fetch(
-          <span style="color:#1F618D">https://foxtrotapi.herokuapp.com/date/Month.Date.Year</span>
-          )
-          <span style="color:#808B96"> //format is MM.DD.YYYY </span>
-        </span>
-      </p>
+    <div class="response">
       <div style="color:#28B463"> response: </div>
-      <div style="color:#808B96">
-        /* { "id_": 1,
-        "author": "Bill Amend",
-        "title": "Iguanoman",
-        "img_src": "iguanoman.png"
-        "date": Month.Date.Year
-        "success": true} */
+      <div>
+        {
+        <div style="margin-left:10%;">
+          "id_": 1,
+          <br> "author": "Bill Amend",
+          <br> "title": "Iguanoman",
+          <br> "img_src": "iguanoman.png",
+          <br> "date": "7.12.2020",
+          <br> "success": true,
+          <br>
+        </div>
+        }
       </div>
     </div>
-
   </div>
+
+
+
   <div class="comicdiv">
     <button id="fetchComic" class="button"><span>Fetch Another Comic! </span></button>
     <div id="comicTitle"> </div>

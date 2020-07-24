@@ -38,6 +38,7 @@ body {
 
 
 .code {
+  width: 65%;
   padding: 10px;
   margin-left: 3%;
   font-family: 'Roboto Mono', monospace;
@@ -45,15 +46,34 @@ body {
   border-radius:1px;
 }
 
+.code_response {
+  display: flex;
+}
+
+.response {
+  width: 25%;
+  height: 20%;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 3%;
+  padding: 1% 0% 1% 1%;
+  background-color:#F2F3F4;
+  border-radius:2px;
+  box-shadow: 0px 2px 5px 2px #E5E7E9;
+}
 #code_editor {
+  margin:1%;
   width: 90%;
-  margin: 10px;
   padding: 10px;
   background-color: #F2F3F4;
   border-radius:2px;
   font-size:15px;
   box-shadow: 0px 2px 5px 2px #E5E7E9;
 
+}
+
+#comments {
+  color:#808B96;
+  margin-top: 2px;
 }
 
 .about {
