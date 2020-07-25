@@ -1,8 +1,8 @@
 const button = document.getElementById("fetchComic");
 button.onclick = get_comic;
 
+
 async function get_comic() {
-  console.log("pressed")
   const x = await fetch("/random");
   const y = await x.json();
   console.log(y);
